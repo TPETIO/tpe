@@ -2,14 +2,11 @@
     require_once('libs/Smarty.class.php');
     class ClaseVista{
         private $smarty;
-        public function imprimirInicio(){
-            $smarty = new Smarty();
+        public function imprimirInicio($comandos, $funciones){
+            $smarty = new Smarty(); 
+            $this->smarty->asing('funciones', $funciones);  
+            $this->smarty->asing('comandos', $comandos);
             $smarty->display('inicio.tpl');
         }
-        public function imprimirComandos($comandos){
-            $this->smarty->asing($comandos);         
-        }
-        public function imprimirFunciones($funciones){
-            $this->smarty->asing($funciones);         
-        }
+      
     }
