@@ -11,7 +11,7 @@
                     </button>
                 </h5>
             </div>
-            {foreach $metodos item=metodo }
+            {foreach $comandos item=comando }
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                         <h6>{$metodo->metodo}</h6>
